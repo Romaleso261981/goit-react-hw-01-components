@@ -12,28 +12,28 @@ import {
   Quantity,
 } from './ProfileStyled';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = (user) => {
   return (
     <ProfileClass>
       <Description>
-        <Avatar src={avatar} alt="User avatar" />
-        <Name>{username}</Name>
-        <Tag>@{tag}</Tag>
-        <Location>{location}</Location>
+        <Avatar src={user.user.avatar} alt="User avatar" />
+        <Name>{user.user.username}</Name>
+        <Tag>@{user.user.tag}</Tag>
+        <Location>{user.user.location}</Location>
       </Description>
 
       <Stats>
         <StatsItem>
           <Label>Followers</Label>
-          <Quantity>{stats.followers}</Quantity>
+          <Quantity>{user.user.stats.followers}</Quantity>
         </StatsItem>
         <StatsItem>
           <Label>Views</Label>
-          <Quantity>{stats.views}</Quantity>
+          <Quantity>{user.user.stats.views}</Quantity>
         </StatsItem>
         <StatsItem>
           <Label>Likes</Label>
-          <Quantity>{stats.likes}</Quantity>
+          <Quantity>{user.user.stats.likes}</Quantity>
         </StatsItem>
       </Stats>
     </ProfileClass>
