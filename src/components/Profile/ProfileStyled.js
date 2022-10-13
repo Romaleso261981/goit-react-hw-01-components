@@ -8,7 +8,7 @@ export const ProfileClass = styled.div`
 `;
 
 export const Description = styled.div`
-  padding: 40px;
+  padding: 20px;
   align-items: center;
   text-align: center;
 `;
