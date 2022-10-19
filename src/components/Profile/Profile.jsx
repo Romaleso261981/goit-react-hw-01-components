@@ -24,7 +24,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 
       <Stats>
         <StatsItem>
-          <Label>Followers</Label>
+          <Label isSelected={true}>Followers</Label>
           <Quantity>{stats.followers}</Quantity>
         </StatsItem>
         <StatsItem>
@@ -36,7 +36,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           <Quantity>{stats.likes}</Quantity>
         </StatsItem>
       </Stats>
-      </ProfileClass>
+    </ProfileClass>
   );
 };
 
